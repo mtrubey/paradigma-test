@@ -6,14 +6,28 @@
 }
 
 @media (min-width: 1920px) {
+    .header-info{
+        .header-info__item:first-child,
+        .header-info__item:last-child{
+            flex-basis: auto;
+        }
+    }
     .advantages{
         &::before{
             background-size: cover !important;
             height: 60px;
         }
     }
+    .first-screen{
+        .first-screen__content{
+            flex-basis: 50vw;
+        }
+    }
+    .btn{
+        max-width: 400px;
+    }
 }
-@media (max-width: 1700px) {
+@media (max-width: 1760px) {
     .first-screen{
         .first-screen__content{
             flex-basis: 50vw;
@@ -26,17 +40,19 @@
         .first-screen__content{
             flex-basis: 70vw;
         }
-        .advantages{
+        .advantages-box{
             flex-basis: 20vw;
 
-            &::before{
-                background-size: cover;
-                height: 60px;
-            }
-
-            .advantages__item{
-                &::after{
+            .advantages{
+                &::before{
                     background-size: cover;
+                    height: 60px;
+                }
+
+                .advantages__item{
+                    &::after{
+                        background-size: cover;
+                    }
                 }
             }
         }
@@ -80,72 +96,111 @@
     body, html{font-size: rem(12);}
     .container{padding: 0 22px}
     .header{overflow: hidden;}
-    .header-info{
-        gap: 0;
+    .h1{font-size: rem(28); line-height: rem(42)}
 
-        .header-info__item{
-            flex: 0 0 33.333%;
+    .mobile-header-container{
+        .mobile-header{
+            display: flex;
             justify-content: center;
+            align-items: center;
+            position: relative;
+            z-index: 112;
 
-            &:last-child{
-                flex-basis: 33.333vw;
-                flex-direction: row;
-                justify-content: flex-end;
-                position: relative;
+            .mobile-header__item{
+                text-align: center;
+                flex-grow: 1;
+
+                &:first-child,
+                &:last-child{
+                    flex: 0 0 25%;
+                }
+                &:not(:first-child){
+                    padding: 10px 0;
+                }
             }
         }
         .logo{
-            flex-basis: 33.333%;
+            align-self: start;
             img{
                 max-width: 85%;
             }
         }
         .icon-menu{
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            text-align: right;
-            z-index: 112;
-            display: none;
+            position: relative;
+            margin: 0 auto;
+            background: url("../img/burger-open.svg") no-repeat 50% 0;
+            height: 18px;
+            cursor: pointer;
 
-            &.show{display: block}
+            &.close{
+                background: url("../img/burger-close.svg") no-repeat 50% 0;
+            }
         }
-        .nav-mobile {
+        .mobile-menu-container {
             position: fixed;
-            z-index: 110;
             top: 0;
             bottom: 0;
             left: 0;
             right: 0;
             background-color: $blue;
-            transform: translate(-50px, 0);
+            transform: translate(0, -30px);
             opacity: 0;
-            transition: all .125s ease;
-            display: none;
+            transition: all .25s ease;
+            z-index: 0;
 
             &.show {
-                display: block;
                 opacity: 1;
                 transform: translate(0, 0);
+                z-index: 110;
             }
         }
-    }
+        .mobile-menu {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            padding: 88px 22px 40px;
+            height: 100%;
+            min-width: 230px;
+            max-width: 450px;
+            text-align: center;
+            margin: 0 auto;
 
+        }
+        .nav-mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .nav-mobile__item{
+            font-weight: 500;
+            padding: 10px 15px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+    }
     .first-screen{
         flex-direction: column-reverse;
-        justify-content: start;
+        justify-content: center;
         align-items: center;
         text-align: center;
-        height: calc(100% - 210px);
+        //height: calc(100% - 210px);
 
         .first-screen__content,
-        .advantages{flex-basis: auto;}
         .first-screen__content{
             .first-screen__text{
+                font-size: rem(24);
+                line-height: rem(36);
                 width: max-content;
                 margin-left: auto;
                 margin-right: auto;
+
+                &::before{
+                    left: -50px;
+                    height: 7px;
+                    background-size: contain;
+                }
             }
         }
         .first-screen__promotion-box{
@@ -166,8 +221,12 @@
             transform: translate(0, 60%);
             position: fixed;
             bottom: 0;
-            z-index: 100;
+            z-index: 1;
+            transition: all 0.75s ease;
 
+            &.show{transform: translate(0, 0);}
+
+            .advantages{flex-basis: auto;}
             .advantages__btn{
                 position: absolute;
                 right: 14px;
@@ -179,10 +238,14 @@
                 background-position: 50%;
                 border-radius: 50%;
                 z-index: 2;
-                transition: all .125s ease;
+                transition: all .25s ease;
 
                 &:active{
-                    transform: scale(1.2);
+                    //transform: scale(1.2);
+                    height: 50px;
+                    width: 50px;
+                    right: 5px;
+                    top: 11px;
                 }
             }
             .advantages__info{
@@ -193,10 +256,16 @@
                 color: $gray;
                 background-color: $white;
                 padding: 10px;
-                bottom: 10px;
+                bottom: 20px;
                 left: 0;
                 right: 0;
                 top: 22%;
+                opacity: 0;
+                transition: opacity 1s ease;
+
+                &.show{
+                    opacity: 1;
+                }
             }
             .advantages{
                 max-width: 200px;
@@ -217,11 +286,79 @@
     }
 
     .btn{
-        display: block;
         margin: 12px auto;
         min-width: 270px;
         max-width: 310px;
         width: 100%;
+        padding: 25px 50px 25px 50px;
     }
 
+}
+@media (max-width: 768px) {
+    .btn{
+        display: block;
+    }
+}
+@media (max-width: 600px) {
+    .h1{
+        font-size: rem(24);
+        line-height: rem(36);
+    }
+    .mobile-header-container {
+        .mobile-header {
+
+            .mobile-header__item {
+
+                &:first-child,
+                &:last-child {
+                    flex: 0 0 30%;
+                }
+            }
+            .time-work{
+                font-size: rem(7);
+            }
+        }
+
+        .logo {
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+    .first-screen {
+        .first-screen__content {
+            .first-screen__text {
+                font-size: rem(18);
+                line-height: rem(30);
+            }
+        }
+    }
+
+    .btn{
+        font-size: rem(10);
+        line-height: rem(16);
+        padding: 14px 50px 14px 20px;
+        max-width: 276px;
+
+        &::after{
+            right: 30px;
+        }
+    }
+}
+@media (max-width: 425px) {
+    .header-contacts{
+        .phone {
+            a{
+                font-size: rem(14);
+            }
+        }
+    }
+    .modal{
+        .phone-input{
+            max-width: 270px;
+        }
+    }
+    .btn{
+        min-height: auto;
+    }
 }

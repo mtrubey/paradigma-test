@@ -44,16 +44,16 @@
                         </a>
                     </div>
                 </div>
-                <div class="header-info__item logo">
+                <div class="header-info__item logo hide-mobile">
                     <img src="./img/logo.png">
                 </div>
-                <div class="header-info__item">
-                    <div class="messengers-box hide-mobile">
+                <div class="header-info__item hide-mobile">
+                    <div class="messengers-box">
                         <span>Отвечаем <b>онлайн</b></span>
                         <div class="messengers">
-                            <a href=""><img src="./img/whatsapp.svg"></a>
-                            <a href=""><img src="./img/viber.svg"></a>
-                            <a href=""><img src="./img/telegram.svg"></a>
+                            <a href="https://api.whatsapp.com/send?phone=88002225460" target="_blank"><img alt="whatsapp" src="./img/whatsapp.svg"></a>
+                            <a href="https://add/?number=88002225460" target="_blank"><img alt="viber" src="./img/viber.svg"></a>
+                            <a href="tg://resolve?domain=88002225460" target="_blank"><img alt="telegram" src="./img/telegram.svg"></a>
                         </div>
                     </div>
                     <div class="header-contacts">
@@ -68,29 +68,31 @@
                         </a>
                     </div>
                 </div>
-                <div class="header-info__item hide-desktop">
-                    <svg class="icon-menu show" width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M18.8986 2.12687H1.10145C0.521739 2.12687 0 1.6791 0 1.06343C0 0.447761 0.521739 0 1.10145 0H18.8986C19.5362 0 20 0.503731 20 1.06343C20 1.62313 19.4783 2.12687 18.8986 2.12687Z" fill="currentColor"/>
-                        <path d="M18.8986 8.56339H1.10145C0.463768 8.56339 0 8.05966 0 7.49996C0 6.94025 0.521739 6.43652 1.10145 6.43652H18.8986C19.5362 6.43652 20 6.94025 20 7.49996C20 8.05966 19.4783 8.56339 18.8986 8.56339Z" fill="currentColor"/>
-                        <path d="M18.8986 14.9999H1.10145C0.521739 14.9999 0 14.5522 0 13.9365C0 13.3208 0.521739 12.873 1.10145 12.873H18.8986C19.5362 12.873 20 13.3768 20 13.9365C20 14.4962 19.4783 14.9999 18.8986 14.9999Z" fill="currentColor"/>
-                    </svg>
-                    <svg class="icon-menu" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M10.9979 8.99994L17.0896 2.92244C17.3563 2.65567 17.5062 2.29386 17.5062 1.9166C17.5062 1.53934 17.3563 1.17753 17.0896 0.910771C16.8228 0.644007 16.461 0.494141 16.0837 0.494141C15.7065 0.494141 15.3447 0.644007 15.0779 0.910771L9.0004 7.00244L2.9229 0.910771C2.65614 0.644007 2.29433 0.494141 1.91707 0.494141C1.53981 0.494141 1.178 0.644007 0.911235 0.910771C0.644471 1.17753 0.494605 1.53934 0.494605 1.9166C0.494605 2.29386 0.644471 2.65567 0.911235 2.92244L7.0029 8.99994L0.911235 15.0774C0.778453 15.2091 0.673062 15.3658 0.601139 15.5385C0.529217 15.7111 0.492188 15.8963 0.492188 16.0833C0.492188 16.2703 0.529217 16.4555 0.601139 16.6281C0.673062 16.8007 0.778453 16.9574 0.911235 17.0891C1.04293 17.2219 1.19962 17.3273 1.37225 17.3992C1.54489 17.4711 1.73005 17.5082 1.91707 17.5082C2.10409 17.5082 2.28925 17.4711 2.46189 17.3992C2.63452 17.3273 2.7912 17.2219 2.9229 17.0891L9.0004 10.9974L15.0779 17.0891C15.2096 17.2219 15.3663 17.3273 15.5389 17.3992C15.7116 17.4711 15.8967 17.5082 16.0837 17.5082C16.2708 17.5082 16.4559 17.4711 16.6286 17.3992C16.8012 17.3273 16.9579 17.2219 17.0896 17.0891C17.2223 16.9574 17.3277 16.8007 17.3997 16.6281C17.4716 16.4555 17.5086 16.2703 17.5086 16.0833C17.5086 15.8963 17.4716 15.7111 17.3997 15.5385C17.3277 15.3658 17.2223 15.2091 17.0896 15.0774L10.9979 8.99994Z" fill="currentColor"/>
-                    </svg>
+            </div>
+            <div class="mobile-header-container hide-desktop">
+                <div class="mobile-header">
+                    <div class="logo mobile-header__item">
+                        <img src="./img/logo.png">
+                    </div>
+                    <div class="header-contacts mobile-header__item">
+                        <div class="time-work">
+                            <b>Пн-Пт</b> 9:00 - 18:00, <b>Сб</b> 10:00 - 18:00
+                        </div>
+                        <div class="phone">
+                            <a href="tel:88002225460">8 (800) 222-54-60</a>
+                        </div>
+                        <a class="call-back-btn" href="javascript:void(0)">
+                            Позвоните мне
+                        </a>
+                    </div>
+                    <div class="mobile-header__item">
+                        <div class="icon-menu"></div>
+                    </div>
+                </div>
 
-                    <div>
-                        <!--<div class="header-contacts">
-                            <div class="time-work">
-                                <b>Пн-Пт</b> 9:00 - 18:00, <b>Сб</b> 10:00 - 18:00
-                            </div>
-                            <div class="phone">
-                                <a href="tel:88002225460">8 (800) 222-54-60</a>
-                            </div>
-                            <a class="call-back-btn" href="javascript:void(0)">
-                                Позвоните мне
-                            </a>
-                        </div>-->
-                        <nav class="nav-mobile show" style="">
+                <div class="mobile-menu-container">
+                    <div class="mobile-menu">
+                        <nav class="nav-mobile" style="">
                             <a class="nav-mobile__item" href="#">
                                 <svg class="home" width="23" height="22" viewBox="0 0 23 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M22.6129 9.77275L12.2944 0.311896C11.8406 -0.103965 11.1578 -0.103965 10.7041 0.311896L0.385564 9.77275C0.0216964 10.1073 -0.0951005 10.618 0.0800948 11.0791C0.25529 11.5402 0.691032 11.8385 1.18068 11.8385H2.82931V21.3174C2.82931 21.6926 3.13029 22 3.50763 22H9.1633C9.53615 22 9.84162 21.6971 9.84162 21.3174V15.5632H13.1658V21.3174C13.1658 21.6926 13.4668 22 13.8442 22H19.4953C19.8682 22 20.1736 21.6971 20.1736 21.3174V11.8385H21.8223C22.3119 11.8385 22.7432 11.5402 22.9229 11.0791C23.0936 10.618 22.9768 10.1073 22.6129 9.77275Z" fill="currentColor"/>
@@ -104,7 +106,7 @@
                             <a class="nav-mobile__item" href="#">Ответы на вопросы</a>
                             <a class="nav-mobile__item" href="#">контакты</a>
                         </nav>
-                        <!--<div class="company-info">
+                        <div class="company-info">
                             <b>Кровельные и фасадные материалы</b> в Тюмени и области.
                             Профессиональный монтаж с 2010 года.
                         </div>
@@ -113,22 +115,22 @@
                                 <b>Скачать прайс-каталог</b>
                             </a>
                         </div>
-                        <div class="messengers-box hide-mobile">
+                        <div class="messengers-box">
                             <span>Отвечаем <b>онлайн</b></span>
                             <div class="messengers">
-                                <a href=""><img src="./img/whatsapp.svg"></a>
-                                <a href=""><img src="./img/viber.svg"></a>
-                                <a href=""><img src="./img/telegram.svg"></a>
+                                <a href="https://api.whatsapp.com/send?phone=88002225460" target="_blank"><img alt="whatsapp" src="./img/whatsapp.svg"></a>
+                                <a href="https://add/?number=88002225460" target="_blank"><img alt="viber" src="./img/viber.svg"></a>
+                                <a href="tg://resolve?domain=88002225460" target="_blank"><img alt="telegram" src="./img/telegram.svg"></a>
                             </div>
-                        </div>-->
+                        </div>
                     </div>
-
                 </div>
+
             </div>
             <section class="first-screen">
                 <div class="advantages-box">
                     <div class="advantages__btn hide-desktop" style="background-image: url('img/show-btn.svg')"></div>
-                    <div class="advantages__info hide-desktop">
+                    <div class="advantages__info show hide-desktop">
                         Нажмите на плюсик, чтобы увидеть
                         все преимущества работы с нами
                     </div>
@@ -177,6 +179,36 @@
             </section>
         </div>
     </header>
+
+    <div class="modal">
+        <div class="modal-container">
+            <div class="modal__form-container">
+                <div class="modal__close"></div>
+                <div class="modal__info_show">
+                    <div class="modal__info">
+                        <h2 class="modal__headline">Быстро оставить заявку</h2>
+                        <div class="modal__text">Введите номер, мы позвоним вам в течение 10 минут в рабочее время</div>
+                        <div class="modal__time-work">Пн–Пт 9:00 - 18:00, Сб 10:00 - 18:00</div>
+                    </div>
+                    <form action="" class="modal__form">
+                        <label class="form-field">
+                            <span>Введите номер телефона</span>
+                            <input id="call-me" type="tel" class="phone-input" placeholder="+7(___)___-__-__" required pattern='/\(?\d{3}\)?([-\/\.])\d{3}\1\d{4}/'>
+                        </label>
+                        <button type="submit" class="btn btn_orange btn_send">Позвоните мне</button>
+                        <label class="check-policy">
+                            <input type="checkbox" class="check-policy__input">
+                            <span>Нажимая кнопку вы соглашаетесь с условиями <a href="#" target="_blank">Политики конфиденциальности</a></span>
+                        </label>
+                    </form>
+                </div>
+                <div class="modal__info_success">
+                    <h2 class="modal__headline">Спасибо, ваша заявка отправлена!</h2>
+                    <div class="modal__text">С вами свяжутся в течение 10 минут в рабочее время</div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="./js/main.js"></script>
